@@ -10,5 +10,8 @@ export default {
     // week constants start
 GET_WEEK_KWH:"GET_WEEK_KWH",
 GET_WEEK_GRAPH_DATA:"GET_WEEK_GRAPH_DATA",
+GET_MONTH_DATA:"GET_MONTH_DATA",
+GET_QUARTER_DATA:"GET_QUARTER_DATA",
+GET_YEAR_DATA:"GET_YEAR_DATA"
     // week constants end
 };

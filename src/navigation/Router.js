@@ -44,7 +44,7 @@ const DrawerNavigation = () => {
 
   return (
     <Drawer.Navigator
-    // initialRouteName={getPackageStatus == "true" ? 'EnergyStats' :'HomeStack'}
+    initialRouteName={+getPackageStatus !== true ?  'HomeStack':"EnergyStats"}
       screenOptions={{headerShown: false}}
       drawerContent={CustomDrawerContent}>
       <Drawer.Screen
