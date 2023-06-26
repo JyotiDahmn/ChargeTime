@@ -91,7 +91,7 @@ const DeleteAccountScreen = () => {
       borderColor: COLORS.BLACK,
       marginVertical: 19,
       width: ms(340),
-      height: ms(150),
+      height: ms(130),
       color: COLORS.BLACK,
       fontFamily: 'Roboto',
       fontWeight: '100',

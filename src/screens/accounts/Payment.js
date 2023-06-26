@@ -232,19 +232,24 @@ export default function PaymentGateWay({ navigation }) {
   const handleMakeDefaultCard = async (values) => {
     console.log("-----------",values);
     console.log("===========",user_ID)
+    console.log("ooooooooooo",currentCard)
     try {
       const response = await fetch(`${API}/defaultcard`, {
         method: 'POST',
-        data:{
-          id:  values,
-          user_id : user_ID
-        }
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          id: values,
+          user_id : user_ID,
+        }),
       });
       // console.log("999999999999",response)
       const result = await response.json();
-      console.log("---------------",result)
+      // console.log("---------------",result)
       if (result.msg === "sucessfull") {
-        console.log("Default card set successfully");
+        // handleGetCard()
+        // console.log("Default card set successfully");
         PLATFORM_IOS
           ? Toast.show({
             type: 'success',
@@ -417,9 +422,10 @@ export default function PaymentGateWay({ navigation }) {
                     onPress={() => {
                       if(currentCard.status === 0){
                         // call api to make new card as default and id will be currentCard.id
+                       
                         handleMakeDefaultCard(currentCard?.id)
                     }else if(currentCard.status ===1){
-
+                      navigation.navigate('PaymentGateWay')
                     }else{
 
                     }}}
