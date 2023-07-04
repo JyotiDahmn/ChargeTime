@@ -449,18 +449,33 @@ const HomeStack = () => {
     </Stack.Navigator>
   );
 };
-const SplashStack = () => {
+const AuthStack = () => {
   return (
     <Stack.Navigator screenOptions={screenOptions}>
-      <Stack.Screen name="Splash" component={Splash} />
-      <Stack.Screen name="Introduction" component={Introduction} />
+      {/* <Stack.Screen name="Introduction" component={Introduction} /> */}
+      <Stack.Screen name="DrawerStack" component={DrawerNavigation} />
+      {/* <Stack.Screen name="Splash" component={Splash} /> */}
       <Stack.Screen name="Login" component={Login} />
       <Stack.Screen name="Register" component={Register} />
       <Stack.Screen name="VerifyEmail" component={VerifyEmail} />
       <Stack.Screen name="CompleteProfile" component={CompleteProfile} />
       <Stack.Screen name="ForgetPassword" component={ForgetPassword} />
       <Stack.Screen name="ResetPassword" component={ResetPassword} />
-      <Stack.Screen name="DrawerStack" component={DrawerNavigation} />
+      <Stack.Screen name="Home" component={Home} />
+      <Stack.Screen name="PlanSummary" component={PlanSummary} />
+      <Stack.Screen name="PaymentGateWay" component={PaymentGateWay} />
+      <Stack.Screen name="HomeOne" component={HomeOne} />
+      <Stack.Screen name="DownGradeData" component={ForDownGrade} />
+      <Stack.Screen name="Account" component={Account} />
+      <Stack.Screen name="PersonalDetails" component={PersonalDetails} />
+      <Stack.Screen name="Security" component={Security} />
+      <Stack.Screen name="Installation" component={Installation} />
+      <Stack.Screen name="Payment" component={Payment} />
+      <Stack.Screen name="Subscription" component={Subscription} />
+      <Stack.Screen name="Theme" component={Theme} />
+      <Stack.Screen name="Contact" component={Contact} />
+      <Stack.Screen name="deleteAccount" component={deleteAccount} />
+      <Stack.Screen name="Privacy Policy" component={Privacy} />
     </Stack.Navigator>
   );
 };
@@ -553,7 +568,8 @@ console.log(isAuthorized, 'getLocationId');
         </>
       ) : (
         <>
-          <Stack.Screen name="DrawerStack" component={DrawerNavigation} />
+          <Stack.Screen name="AuthStack" component={AuthStack} />
+          {/* <Stack.Screen name="DrawerStack" component={DrawerNavigation} /> */}
         </>
       )}
     </Stack.Navigator>

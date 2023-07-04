@@ -84,7 +84,7 @@ export default function Login({navigation}) {
         setForLoading(true);
         // setShowPackage(true);
         dispatch(setBasePackage([]));
-        // dispatch(setIsAuthorized(true));
+        dispatch(setIsAuthorized(true));
         setForLoading(false);
         navigation.navigate('DrawerStack');
       } else {
@@ -377,7 +377,7 @@ export default function Login({navigation}) {
         // } else {
         // }
         dispatch(setPurchaseData(res?.data));
-        // dispatch(setIsAuthorized(true));
+        dispatch(setIsAuthorized(true));
         navigation.navigate('DrawerStack');
       })
       .catch(err => {

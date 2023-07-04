@@ -100,7 +100,7 @@ const [savedCard , setSavedCard] = useState([]);
    await AsyncStorage.clear();
    await persistor.purge();
    dispatch(setLogout());
-navigationRef.navigate('Login')
+navigationRef.navigate('LoginStack')
   };
 
 
